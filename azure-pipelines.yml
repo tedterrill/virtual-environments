@@ -14,6 +14,8 @@ jobs:
     inputs:
       targetType: 'inline'
       script: 'Get-ChildItem -Path Env:'
+    env:
+      ARM_CLIENT_ID: ${{ variables.ARM_CLIENT_ID }}
 
   - script: |
       echo ${{ variables.ARM_CLIENT_ID }}
