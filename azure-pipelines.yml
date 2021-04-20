@@ -14,3 +14,4 @@ jobs:
     inputs:
       templateType: 'custom'
       customTemplateLocation: '$(System.DefaultWorkingDirectory)/images/win/simple-windows2016.json'
+      packerVersion: '1.7.0'
