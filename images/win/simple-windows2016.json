@@ -46,7 +46,7 @@
          "tenant_id": "{{user `tenant_id`}}",
          "os_disk_size_gb": "256",
          "location": "{{user `location`}}",
-         "vm_size": "Standard_DS4_v2",
+         "vm_size": "{{user `vm_size`}}",
          "resource_group_name": "{{user `resource_group`}}",
          "storage_account": "{{user `storage_account`}}",
          "temp_resource_group_name": "{{user `temp_resource_group_name`}}",
