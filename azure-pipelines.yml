@@ -10,8 +10,16 @@ jobs:
   - group: packer-image-build-variables
 
   steps:
-  - task: PackerBuild@1
+  - task: Packer@1
     inputs:
-      templateType: 'custom'
-      customTemplateLocation: '$(System.DefaultWorkingDirectory)/images/win/simple-windows2016.json'
-      packerVersion: '1.7.0'
+      connectedServiceType: 'azure'
+      azureSubscription: 'BizSpark (Pipelines Service Principal)'
+      templatePath: '$(System.DefaultWorkingDirectory)/images/win/simple-windows2016.json'
+      command: 'build'
+      force: true  
+
+  # - task: PackerBuild@1
+  #   inputs:
+  #     templateType: 'custom'
+  #     customTemplateLocation: '$(System.DefaultWorkingDirectory)/images/win/simple-windows2016.json'
+  #     packerVersion: '1.7.0'
