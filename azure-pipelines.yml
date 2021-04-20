@@ -1,0 +1,17 @@
+trigger:
+- custodia/agent
+
+variables:
+  group: packer-image-build-variables
+
+jobs:
+- job:
+  displayName: DevOps Pipeline Agent Image Build
+  pool:
+    vmImage: 'vs2017-win2016'
+
+  steps:
+  - task: PackerBuild@1
+    inputs:
+      templateType: 'custom'
+      customTemplateLocation: '$(System.DefaultWorkingDirectory)/images/win/windows2016.json'
