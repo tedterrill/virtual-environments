@@ -10,22 +10,7 @@ jobs:
   - group: packer-image-build-variables
 
   steps:
-  - task: PowerShell@2
+  - task: PackerBuild@1
     inputs:
-      targetType: 'inline'
-      script: 'Get-ChildItem -Path Env:'
-    env:
-      ARM_CLIENT_ID: ${{ variables.ARM_CLIENT_ID }}
-
-  - script: |
-      echo ${{ variables.ARM_CLIENT_ID }}
-      echo $(ARM_CLIENT_ID)
-
-  # - task: PackerBuild@1
-  #   inputs:
-  #     templateType: 'custom'
-  #     customTemplateLocation: '$(System.DefaultWorkingDirectory)/images/win/simple-windows2016.json'
-  #     customTemplateParameters: |
-  #       {
-  #         "client_id": $(ARM_CLIENT_ID)
-  #       }
+      templateType: 'custom'
+      customTemplateLocation: '$(System.DefaultWorkingDirectory)/images/win/simple-windows2016.json'
