@@ -14,4 +14,4 @@ jobs:
   - task: PackerBuild@1
     inputs:
       templateType: 'custom'
-      customTemplateLocation: '$(System.DefaultWorkingDirectory)/images/win/windows2016.json'
+      customTemplateLocation: '$(System.DefaultWorkingDirectory)/images/win/simple-windows2016.json'
