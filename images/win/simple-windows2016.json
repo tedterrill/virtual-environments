@@ -12,7 +12,7 @@
       "virtual_network_name": "{{env `VNET_NAME`}}",
       "virtual_network_resource_group_name": "{{env `VNET_RESOURCE_GROUP`}}",
       "virtual_network_subnet_name": "{{env `VNET_SUBNET`}}",
-      "private_virtual_network_with_public_ip": "{{env `PRIVATE_VIRTUAL_NETWORK_WITH_PUBLIC_IP`}}",
+      "private_virtual_network_with_public_ip": true,
       "vm_size": "Standard_D4s_v4",
       "run_scan_antivirus": "false",
       "root_folder": "C:",
