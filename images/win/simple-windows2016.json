@@ -26,7 +26,9 @@
       "install_password": null,
       "capture_name_prefix": "packer",
       "image_version": "dev",
-      "image_os": "win16"
+      "image_os": "win16",
+      "managed_image_name": "devops-image",
+      "managed_image_resource_group_name": "{{env `MANAGED_IMAGE_RESOURCE_GROUP_NAME`}}" 
    },
    "sensitive-variables": [
       "install_password",
@@ -60,7 +62,9 @@
          "communicator": "winrm",
          "winrm_use_ssl": "true",
          "winrm_insecure": "true",
-         "winrm_username": "packer"
+         "winrm_username": "packer",
+         "managed_image_name": "{{user `managed_image_name`}}",
+         "managed_image_resource_group_name": "{{user `managed_image_resource_group_name`}}"
       }
    ],
    "provisioners": [
