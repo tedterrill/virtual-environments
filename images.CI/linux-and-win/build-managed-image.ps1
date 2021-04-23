@@ -2,6 +2,7 @@ param(
     [String] [Parameter (Mandatory=$true)] $TemplatePath,
     [String] [Parameter (Mandatory=$true)] $ClientId,
     [String] [Parameter (Mandatory=$true)] $ClientSecret,
+    [String] [Parameter (Mandatory=$true)] $ResourcesNamePrefix,
     [String] [Parameter (Mandatory=$true)] $Location,
     [String] [Parameter (Mandatory=$true)] $ResourceGroup,
     [String] [Parameter (Mandatory=$true)] $SubscriptionId,
