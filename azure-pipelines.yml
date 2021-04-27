@@ -15,7 +15,7 @@ jobs:
     inputs:
       targetType: 'inline'
       script: |
-        $ImageType = "simple-windows2016"
+        $ImageType = "custom-windows2016"
         $TemplateDirectoryName = "win"
         $TemplateDirectoryPath = Join-Path "images" $TemplateDirectoryName | Resolve-Path
         $TemplatePath = Join-Path $TemplateDirectoryPath "$ImageType.json"
