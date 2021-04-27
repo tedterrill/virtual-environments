@@ -40,7 +40,8 @@ Write-Host "Show Packer Version"
 packer --version
 
 Write-Host "Build $Image VM"
-packer build    -var "client_id=$ClientId" `
+packer build    -force `
+                -var "client_id=$ClientId" `
                 -var "client_secret=$ClientSecret" `
                 -var "install_password=$InstallPassword" `
                 -var "location=$Location" `
